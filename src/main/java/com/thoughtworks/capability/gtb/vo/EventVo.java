@@ -23,7 +23,14 @@ public class EventVo {
     return this.time.getTime();
   }
 
-  public String getType() {
-    return type.getCode();
+  public void setType(String type) {
+    switch (type) {
+      case "D":
+        this.type = EventType.DOWNLOAD;
+        break;
+      case "U":
+      default:
+        this.type = EventType.UPLOAD;
+    }
   }
 }
