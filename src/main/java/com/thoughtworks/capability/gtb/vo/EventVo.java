@@ -22,15 +22,4 @@ public class EventVo {
   public long getTime() {
     return this.time.getTime();
   }
-
-  public void setType(String type) {
-    switch (type) {
-      case "D":
-        this.type = EventType.DOWNLOAD;
-        break;
-      case "U":
-      default:
-        this.type = EventType.UPLOAD;
-    }
-  }
 }
